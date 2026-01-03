@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코리아환자이송센터 | 서울사설구급차</title>
+    <meta name="description" content="사설구급차 비용, 사설응급차, 요금, 엠뷸런스, 환자이송, 고인이송, 항공이송 - 24시간 전문 환자이송 서비스">
+    <meta name="keywords" content="사설구급차, 사설응급차, 환자이송, 고인이송, 항공이송, 엠뷸런스, 장거리이송">
+    <meta property="og:title" content="코리아환자이송센터 | 서울사설구급차">
+    <meta property="og:description" content="24시간 전문 환자이송 서비스 - 환자이송, 고인이송, 항공이송">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://서울사설구급차.com">
+    <link rel="canonical" href="https://서울사설구급차.com">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy-900: #0a1628;
+            --navy-800: #0f2342;
+            --navy-700: #1a3a5c;
+            --navy-600: #264d73;
+            --navy-500: #3d6b94;
+            --red-500: #dc2626;
+            --red-600: #b91c1c;
+            --red-400: #f87171;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-600: #475569;
+            --gray-800: #1e293b;
+
+            --font-korean: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            --font-english: 'DM Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-korean);
+            background: var(--white);
+            color: var(--gray-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(10, 22, 40, 0.08);
+            padding: 0.75rem 2rem;
+        }
+
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--red-500), var(--red-600));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 12px rgba(220, 38, 38, 0.25);
+        }
+
+        .logo-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            letter-spacing: -0.02em;
+            transition: color 0.3s;
+        }
+
+        .header:not(.scrolled) .logo-title {
+            color: var(--white);
+        }
+
+        .logo-subtitle {
+            font-size: 0.6875rem;
+            color: var(--gray-600);
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            opacity: 0.8;
+        }
+
+        .header:not(.scrolled) .logo-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .badge-24h {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.875rem;
+            background: transparent;
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            border-radius: 6px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--red-500);
+        }
+
+        .header:not(.scrolled) .badge-24h {
+            background: transparent;
+            border-color: rgba(255, 255, 255, 0.25);
+            color: var(--white);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--red-500);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .header:not(.scrolled) .pulse-dot {
+            background: var(--red-400);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+
+        .header-phone {
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 1.25rem;
+            background: var(--navy-800);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            font-family: var(--font-english);
+            transition: all 0.3s;
+        }
+
+        .header-phone:hover {
+            background: var(--navy-900);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(10, 22, 40, 0.2);
+        }
+
+        .header-phone svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (min-width: 768px) {
+            .header-phone {
+                display: flex;
+            }
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(
+                180deg,
+                rgba(10, 22, 40, 0.7) 0%,
+                rgba(10, 22, 40, 0.85) 50%,
+                rgba(10, 22, 40, 0.95) 100%
+            );
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 2rem 6rem;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-badge-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--red-400);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .hero-badge-text {
+            color: var(--white);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.1s both;
+        }
+
+        .hero-title-highlight {
+            color: var(--red-400);
+        }
+
+        .hero-description {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        @media (min-width: 640px) {
+            .hero-actions {
+                flex-direction: row;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.125rem 2rem;
+            font-size: 1.0625rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 14px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--red-500), var(--red-600));
+            color: var(--white);
+            box-shadow: 0 8px 30px rgba(220, 38, 38, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 45px rgba(220, 38, 38, 0.5);
+        }
+
+        .btn-primary:active {
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .btn svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out 0.5s both;
+        }
+
+        .scroll-indicator {
+            width: 24px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            padding-top: 8px;
+        }
+
+        .scroll-dot {
+            width: 4px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 2px;
+            animation: scrollBounce 1.5s ease-in-out infinite;
+        }
+
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(12px); opacity: 0.3; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========== TRUST STRIP ========== */
+        .trust-strip {
+            background: linear-gradient(180deg, var(--navy-900) 0%, #0d1d35 100%);
+            padding: 1.75rem 2rem;
+            border-top: 3px solid var(--red-500);
+            position: relative;
+        }
+
+        .trust-strip::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        }
+
+        .trust-strip-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .trust-strip-inner {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .trust-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .trust-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--red-400);
+        }
+
+        .trust-text {
+            color: var(--white);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .trust-subtext {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.8125rem;
+            font-weight: 400;
+            margin-top: 0.25rem;
+        }
+
+        /* ========== SERVICES SECTION ========== */
+        .services {
+            padding: 6rem 2rem;
+            background: var(--gray-50);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: linear-gradient(135deg, var(--navy-800), var(--navy-700));
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(10, 22, 40, 0.2);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: var(--navy-900);
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .service-card {
+            position: relative;
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(10, 22, 40, 0.08);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 60px rgba(10, 22, 40, 0.18);
+        }
+
+        .service-card:hover .service-number {
+            background: var(--red-500);
+            color: var(--white);
+        }
+
+        .service-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.08);
+        }
+
+        .service-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(10, 22, 40, 0.8) 100%);
+        }
+
+        .service-number {
+            position: absolute;
+            top: 1.25rem;
+            left: 1.25rem;
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-english);
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--navy-800);
+            transition: all 0.3s ease;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .service-description {
+            font-size: 1rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .service-feature {
+            padding: 0.5rem 1rem;
+            background: var(--gray-100);
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--navy-700);
+        }
+
+        /* ========== WHY SECTION ========== */
+        .why-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%);
+        }
+
+        .why-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .why-image {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(10, 22, 40, 0.15);
+        }
+
+        .why-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .why-image-badge {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            padding: 1rem 1.5rem;
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .why-image-badge-title {
+            font-family: var(--font-english);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--red-500);
+            line-height: 1;
+        }
+
+        .why-image-badge-text {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .why-content {
+            padding: 2rem 0;
+        }
+
+        .why-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 1.25rem;
+        }
+
+        .why-item-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--navy-700), var(--navy-800));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(10, 22, 40, 0.2);
+        }
+
+        .why-item-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--white);
+        }
+
+        .why-item-content {
+            flex: 1;
+        }
+
+        .why-item-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .why-item-text {
+            font-size: 1rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 50%, var(--navy-900) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.2) 0%, transparent 60%);
+            pointer-events: none;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(61, 107, 148, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        .cta-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .cta-phone {
+            font-family: var(--font-english);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .cta-phone svg {
+            width: 28px;
+            height: 28px;
+            animation: ring 1.5s ease-in-out infinite;
+        }
+
+        @keyframes ring {
+            0%, 100% { transform: rotate(0deg); }
+            10%, 30% { transform: rotate(-15deg); }
+            20%, 40% { transform: rotate(15deg); }
+            50% { transform: rotate(0deg); }
+        }
+
+        /* ========== CONTACT SECTION ========== */
+        .contact-section {
+            padding: 5rem 2rem;
+            background: var(--gray-50);
+        }
+
+        .blog-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 8px 40px rgba(10, 22, 40, 0.08);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            display: block;
+            border: 2px solid transparent;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(10, 22, 40, 0.15);
+            border-color: #03C75A;
+        }
+
+        .blog-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-card-icon {
+            width: 64px;
+            height: 64px;
+            background: #03C75A;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .blog-card-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        .blog-card-titles {
+            flex: 1;
+        }
+
+        .blog-card-title {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-bottom: 0.25rem;
+        }
+
+        .blog-card-subtitle {
+            font-size: 0.9375rem;
+            color: #03C75A;
+            font-weight: 600;
+        }
+
+        .blog-card-description {
+            font-size: 1rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-tag {
+            padding: 0.5rem 1rem;
+            background: var(--gray-100);
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--navy-700);
+        }
+
+        .blog-card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
+            background: #03C75A;
+            color: white;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            transition: all 0.3s;
+        }
+
+        .blog-card:hover .blog-card-cta {
+            background: #02a34b;
+        }
+
+        .blog-card-cta svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover .blog-card-cta svg {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 640px) {
+            .blog-card {
+                padding: 1.75rem 1.5rem;
+            }
+
+            .blog-card-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .blog-card-title {
+                font-size: 1.25rem;
+            }
+
+            .blog-card-description {
+                font-size: 0.9375rem;
+                text-align: center;
+            }
+
+            .blog-card-tags {
+                justify-content: center;
+            }
+
+            .blog-card-cta {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--navy-900);
+            padding: 3rem 2rem 6rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer {
+                padding-bottom: 3rem;
+            }
+        }
+
+        .footer-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+            line-height: 1.8;
+        }
+
+        .footer-contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            flex-wrap: wrap;
+        }
+
+        .footer-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            text-decoration: none;
+            font-family: var(--font-english);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .footer-phone:hover {
+            color: var(--red-400);
+        }
+
+        .footer-phone svg {
+            stroke: var(--red-400);
+        }
+
+        .footer-divider {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-hours {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .footer-copyright {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.8125rem;
+        }
+
+        /* ========== FIXED BOTTOM BAR ========== */
+        .fixed-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--white);
+            box-shadow: 0 -4px 30px rgba(10, 22, 40, 0.15);
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fixed-bar.visible {
+            transform: translateY(0);
+        }
+
+        @media (min-width: 768px) {
+            .fixed-bar {
+                display: none;
+            }
+        }
+
+        .fixed-bar-inner {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .fixed-bar-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1.125rem;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            min-height: 56px;
+        }
+
+        .fixed-bar-btn.call {
+            background: linear-gradient(135deg, var(--red-500), var(--red-600));
+            color: var(--white);
+        }
+
+        .fixed-bar-btn.kakao {
+            background: #FEE500;
+            color: #3C1E1E;
+        }
+
+        .fixed-bar-btn svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* ========== SCROLL ANIMATIONS ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 6V18M6 12H18" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">코리아환자이송센터</span>
+                    <span class="logo-subtitle">Korea Patient Transport</span>
+                </div>
+            </a>
+            <div class="header-cta">
+                <div class="badge-24h">
+                    <span class="pulse-dot"></span>
+                    <span>24시간 운영</span>
+                </div>
+                <a href="tel:010-8129-9129" class="header-phone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    010-8129-9129
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="images/hero-ambulance.webp" alt="코리아환자이송센터 구급차" loading="eager">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                <span class="hero-badge-text">365일 24시간 긴급출동 대기</span>
+            </div>
+            <h1 class="hero-title">
+                믿을 수 있는<br>
+                <span class="hero-title-highlight">환자이송</span> 전문 서비스
+            </h1>
+            <p class="hero-description">
+                환자이송, 고인이송, 항공이송까지<br>
+                전문 응급구조사가 안전하게 모십니다
+            </p>
+            <div class="hero-actions">
+                <a href="tel:010-8129-9129" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    지금 전화하기
+                </a>
+                <a href="https://open.kakao.com/o/scUPms1h" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3C6.48 3 2 6.58 2 11c0 2.76 1.81 5.18 4.5 6.57-.15.53-.53 1.94-.61 2.24-.1.37.14.36.29.26.12-.08 1.87-1.23 2.63-1.73.72.11 1.47.16 2.19.16 5.52 0 10-3.58 10-8s-4.48-8-10-8z"/>
+                    </svg>
+                    카카오톡 문의
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+            <span>아래로 스크롤</span>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+        <div class="trust-strip-inner">
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="trust-text">24시간 운영</div>
+                    <div class="trust-subtext">365일 연중무휴</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="trust-text">안전한 이송</div>
+                    <div class="trust-subtext">전문 의료장비 구비</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="trust-text">전국 어디든</div>
+                    <div class="trust-subtext">장거리 이송 가능</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="trust-text">전문 인력</div>
+                    <div class="trust-subtext">응급구조사 동승</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header reveal">
+            <span class="section-label">Services</span>
+            <h2 class="section-title">전문 이송 서비스</h2>
+            <p class="section-description">
+                다양한 상황에 맞는 맞춤형 이송 서비스를 제공합니다.<br>
+                전문 인력과 장비로 안전하게 모시겠습니다.
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-image">
+                    <img src="images/patient-care.webp" alt="환자이송 서비스" loading="lazy">
+                    <div class="service-image-overlay"></div>
+                    <div class="service-number">01</div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">환자이송</h3>
+                    <p class="service-description">
+                        병원 간 전원, 외래진료, 퇴원 등 다양한 상황에서 환자를 안전하게 이송해 드립니다. 전문 의료장비와 응급구조사가 함께합니다.
+                    </p>
+                    <div class="service-features">
+                        <span class="service-feature">병원 간 전원</span>
+                        <span class="service-feature">외래진료 이송</span>
+                        <span class="service-feature">퇴원 이송</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card reveal reveal-delay-2">
+                <div class="service-image">
+                    <img src="images/long-distance.webp" alt="장거리이송 서비스" loading="lazy">
+                    <div class="service-image-overlay"></div>
+                    <div class="service-number">02</div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">장거리이송</h3>
+                    <p class="service-description">
+                        서울에서 전국 어디든 안전하게 모시겠습니다. 장거리 이동 시에도 편안하고 안정적인 이송 환경을 제공합니다.
+                    </p>
+                    <div class="service-features">
+                        <span class="service-feature">전국 이송</span>
+                        <span class="service-feature">지방 이송</span>
+                        <span class="service-feature">편안한 환경</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card reveal reveal-delay-3">
+                <div class="service-image">
+                    <img src="images/air-transport.webp" alt="항공이송 서비스" loading="lazy">
+                    <div class="service-image-overlay"></div>
+                    <div class="service-number">03</div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">항공이송</h3>
+                    <p class="service-description">
+                        긴급한 상황이나 먼 거리의 이송이 필요할 때, 헬기 및 항공기를 통한 신속한 이송 서비스를 연계해 드립니다.
+                    </p>
+                    <div class="service-features">
+                        <span class="service-feature">헬기 이송</span>
+                        <span class="service-feature">항공기 이송</span>
+                        <span class="service-feature">긴급 이송</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card reveal reveal-delay-4">
+                <div class="service-image">
+                    <img src="images/ambulance-interior.webp" alt="고인이송 서비스" loading="lazy">
+                    <div class="service-image-overlay"></div>
+                    <div class="service-number">04</div>
+                </div>
+                <div class="service-content">
+                    <h3 class="service-title">고인이송</h3>
+                    <p class="service-description">
+                        소중한 분의 마지막 길을 정중하고 안전하게 모시겠습니다. 장례식장까지 세심한 배려로 이송해 드립니다.
+                    </p>
+                    <div class="service-features">
+                        <span class="service-feature">장례식장 이송</span>
+                        <span class="service-feature">정중한 운구</span>
+                        <span class="service-feature">24시간 가능</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="why-section" id="about">
+        <div class="why-grid">
+            <div class="why-image reveal">
+                <img src="images/ambulance-interior.webp" alt="구급차 내부 의료장비" loading="lazy">
+                <div class="why-image-badge">
+                    <div class="why-image-badge-title">24H</div>
+                    <div class="why-image-badge-text">연중무휴 운영</div>
+                </div>
+            </div>
+            <div class="why-content">
+                <div class="section-header" style="text-align: left; margin: 0;">
+                    <span class="section-label">Why Choose Us</span>
+                    <h2 class="section-title">왜 코리아환자이송센터인가요?</h2>
+                    <p class="section-description">
+                        오랜 경험과 전문성으로 환자와 보호자분께 최상의 서비스를 제공합니다.
+                    </p>
+                </div>
+                <div class="why-list">
+                    <div class="why-item reveal">
+                        <div class="why-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                        </div>
+                        <div class="why-item-content">
+                            <h4 class="why-item-title">전문 의료장비 완비</h4>
+                            <p class="why-item-text">산소호흡기, 환자감시장치, 석션기 등 응급상황에 대비한 전문 의료장비를 갖추고 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal reveal-delay-1">
+                        <div class="why-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="why-item-content">
+                            <h4 class="why-item-title">전문 응급구조사 동승</h4>
+                            <p class="why-item-text">자격을 갖춘 응급구조사가 동승하여 이송 중 발생할 수 있는 모든 상황에 대비합니다.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal reveal-delay-2">
+                        <div class="why-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <div class="why-item-content">
+                            <h4 class="why-item-title">신속한 출동</h4>
+                            <p class="why-item-text">24시간 대기 체제로 연락 주시면 신속하게 출동하여 최단 시간 내에 도착합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-inner reveal">
+            <h2 class="cta-title">지금 연락주세요</h2>
+            <p class="cta-description">
+                24시간 언제든 연락 가능합니다.<br>
+                신속하고 친절하게 안내해 드리겠습니다.
+            </p>
+            <div class="cta-buttons">
+                <a href="tel:010-8129-9129" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    지금 전화하기
+                </a>
+                <a href="https://open.kakao.com/o/scUPms1h" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3C6.48 3 2 6.58 2 11c0 2.76 1.81 5.18 4.5 6.57-.15.53-.53 1.94-.61 2.24-.1.37.14.36.29.26.12-.08 1.87-1.23 2.63-1.73.72.11 1.47.16 2.19.16 5.52 0 10-3.58 10-8s-4.48-8-10-8z"/>
+                    </svg>
+                    카카오톡 문의
+                </a>
+            </div>
+            <div class="cta-phone">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                010-8129-9129
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-header reveal">
+            <span class="section-label">Blog</span>
+            <h2 class="section-title">더 알아보기</h2>
+            <p class="section-description">
+                환자이송에 대한 자세한 정보와<br>
+                이용 가이드를 블로그에서 확인하세요.
+            </p>
+        </div>
+        <a href="https://blog.naver.com/ems-8129" target="_blank" rel="noopener" class="blog-card reveal" aria-label="네이버 블로그 방문하기">
+            <div class="blog-card-header">
+                <div class="blog-card-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
+                </div>
+                <div class="blog-card-titles">
+                    <h3 class="blog-card-title">서울사설구급차 공식 블로그</h3>
+                    <span class="blog-card-subtitle">네이버 블로그</span>
+                </div>
+            </div>
+            <p class="blog-card-description">
+                사설구급차 이용 방법, 119와의 차이점, 병원 간 전원 절차, 요양병원·요양원 이송,
+                정신질환 환자이송, 알코올중독 환자이송 등 다양한 상황별 가이드를 확인하실 수 있습니다.
+            </p>
+            <div class="blog-card-tags">
+                <span class="blog-tag">환자이송 가이드</span>
+                <span class="blog-tag">119 vs 사설구급차</span>
+                <span class="blog-tag">병원간 전원</span>
+                <span class="blog-tag">이용방법</span>
+            </div>
+            <span class="blog-card-cta">
+                블로그 방문하기
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </span>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">코리아환자이송센터</div>
+            <p class="footer-text">
+                24시간 환자이송 전문 서비스<br>
+                환자이송 · 고인이송 · 항공이송 · 장거리이송
+            </p>
+            <div class="footer-contact">
+                <a href="tel:010-8129-9129" class="footer-phone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    010-8129-9129
+                </a>
+                <span class="footer-divider">|</span>
+                <span class="footer-hours">365일 24시간 운영</span>
+            </div>
+            <p class="footer-copyright">
+                © 2025 코리아환자이송센터. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Fixed Bottom Bar (Mobile) -->
+    <div class="fixed-bar" id="fixedBar">
+        <div class="fixed-bar-inner">
+            <a href="tel:010-8129-9129" class="fixed-bar-btn call">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                전화하기
+            </a>
+            <a href="https://open.kakao.com/o/scUPms1h" target="_blank" rel="noopener" class="fixed-bar-btn kakao">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 3C6.48 3 2 6.58 2 11c0 2.76 1.81 5.18 4.5 6.57-.15.53-.53 1.94-.61 2.24-.1.37.14.36.29.26.12-.08 1.87-1.23 2.63-1.73.72.11 1.47.16 2.19.16 5.52 0 10-3.58 10-8s-4.48-8-10-8z"/>
+                </svg>
+                카카오톡
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        const fixedBar = document.getElementById('fixedBar');
+
+        let lastScrollY = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            // Header background
+            if (currentScrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Fixed bar visibility
+            if (currentScrollY > 500) {
+                fixedBar.classList.add('visible');
+            } else {
+                fixedBar.classList.remove('visible');
+            }
+
+            lastScrollY = currentScrollY;
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const revealPoint = 150;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
