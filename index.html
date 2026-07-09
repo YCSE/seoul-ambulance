@@ -155,6 +155,8 @@
             font-size: 0.8125rem;
             font-weight: 600;
             color: var(--red-500);
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .header:not(.scrolled) .badge-24h {
@@ -975,6 +977,12 @@
         }
 
         @media (max-width: 640px) {
+            .header,
+            .header.scrolled {
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
             .blog-card {
                 padding: 1.75rem 1.5rem;
             }
