@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://서울사설구급차.com/sitemap.xml
